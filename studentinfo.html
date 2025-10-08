@@ -112,14 +112,14 @@
 
 
         function filterBySearch(keyword) {
-            const filtered = students.filter(s => s.name.toLowerCase().includes(keyword.toLowerCase()));
+            let filtered = students.filter(ele => ele.name.toLowerCase().includes(keyword.toLowerCase()));
             display(filtered);
         }
 
-        searchBox.addEventListener('input', (e) => filterBySearch(e.target.value));
+        searchBox.addEventListener('input', (ele) => filterBySearch(ele.target.value));
 
 
-
+ 
 
 
         allstudents.addEventListener('click', () => {
