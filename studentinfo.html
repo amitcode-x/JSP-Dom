@@ -72,14 +72,24 @@
                     <td>${ele.name}</td>
                     <td>${ele.Gender}</td>
                 </tr>`
-                console.log(res)
+                // console.log(res)
             }
             )
             display_data.innerHTML = res;
         }
         display(students)
 
-        
+        function displayMale(students) {
+            if(students.Gender == 'male')
+
+            console.log(students)
+            return students
+            
+        }
+        displayMale(students)
+
+
+
 
 
 
