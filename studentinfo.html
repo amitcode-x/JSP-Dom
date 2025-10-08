@@ -30,7 +30,7 @@
 
     </div>
 
-    <div class="mt-5" >
+    <div class="mt-5">
 
         <table class="table w-75 m-auto text-center ">
             <thead>
@@ -56,32 +56,31 @@
     <script>
 
         let students = [
-            {id:101, name:'Amit', Gender: 'male'},
-            {id:101, name:'sumit', Gender: 'male'},
-            {id:101, name:'saurabh', Gender: 'male'},
-            {id:101, name:'Anjali', Gender: 'female'},
-            {id:101, name:'Srishti', Gender: 'female'},
-            {id:101, name:'Annu', Gender: 'female'}
+            { id: 101, name: 'Amit', Gender: 'male' },
+            { id: 101, name: 'sumit', Gender: 'male' },
+            { id: 101, name: 'saurabh', Gender: 'male' },
+            { id: 101, name: 'Anjali', Gender: 'female' },
+            { id: 101, name: 'Srishti', Gender: 'female' },
+            { id: 101, name: 'Annu', Gender: 'female' }
         ]
 
         let display_data = document.getElementById('data')
-        let malestudent =  document.getElementById('male-btn')
-        let femalestudent= document.getElementById('female-btn')
+        let malestudent = document.getElementById('male-btn')
+        let femalestudent = document.getElementById('female-btn')
 
-        function display(arr){
-        let res =``;
-        arr.forEach((ele)=>
-    {
-        res +=`<tr>
+        function display(arr) {
+            let res = ``;
+            arr.forEach((ele) => {
+                res += `<tr>
                     <td>${ele.id}</td>
                     <td>${ele.name}</td>
                     <td>${ele.Gender}</td>
                 </tr>`
-                console.log(res)
-    }
-    )
-    display_data.innerHTML=res;
-    }
+                // console.log(res)
+            }
+            )
+            display_data.innerHTML = res;
+        }
 
 
 
