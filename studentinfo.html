@@ -41,11 +41,7 @@
                 </tr>
             </thead>
             <tbody id="data">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                
 
             </tbody>
         </table>
@@ -59,7 +55,7 @@
             { id: 101, name: 'Amit', Gender: 'male' },
             { id: 101, name: 'sumit', Gender: 'male' },
             { id: 101, name: 'saurabh', Gender: 'male' },
-            { id: 101, name: 'Anjali', Gender: 'female' },
+            { id: 101, name: 'Anushka', Gender: 'female' },
             { id: 101, name: 'Srishti', Gender: 'female' },
             { id: 101, name: 'Annu', Gender: 'female' }
         ]
@@ -76,11 +72,14 @@
                     <td>${ele.name}</td>
                     <td>${ele.Gender}</td>
                 </tr>`
-                // console.log(res)
+                console.log(res)
             }
             )
             display_data.innerHTML = res;
         }
+        display(students)
+
+        
 
 
 
