@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>count : <span id="display"></span></h1>
+
+    <button id="inbtn">Inc</button>
+    <button id="decbtn">Dec</button>
+
+    <script>
+        let count = localStorage.getItem('count') ? localStorage.getItem('count') : 0;
+
+        const display = document.getElementById('display');
+        display.textContent = count;
+        let incbtn = document.getElementById('inbtn');
+        let decbtn = document.getElementById('decbtn');
+
+        incbtn.addEventListener('click', () => {
+            count++;
+            display.textContent = count;
+            localStorage.setItem('count', count);
+        });
+        decbtn.addEventListener('click', () => {
+            count--;
+            display.textContent = count;
+            localStorage.setItem('count', count);
+        });
+    </script>
+</body>
+
+</html>
