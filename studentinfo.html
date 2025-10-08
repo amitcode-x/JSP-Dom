@@ -41,7 +41,7 @@
                 </tr>
             </thead>
             <tbody id="data">
-                
+
 
             </tbody>
         </table>
@@ -80,27 +80,59 @@
         }
         // display(students)
 
-        function displayMale(arr) {
-            arr.filter((ele) => {
+        // for male students --------------------------------------------
 
-                ele.gender == 'male'
+        function displayMale(arr) {
+            let males = arr.filter((ele) => {
+                return ele.Gender == 'male'
 
             }
             )
-            
+            display(males);
+            console.log(males)
+
         }
-        displayMale(students)
+        // displayMale(students)
+
+
+        // for female students ----------------------------------------------------
+
+
+        function displayfeMale(arr) {
+            let females = arr.filter((ele) => {
+                return ele.Gender == 'female'
+
+            }
+            )
+            display(females);
+            console.log(females)
+
+        }
+        displayfeMale(students)
 
 
 
-        
-        
 
-        allstudents.addEventListener('click',()=>{
-           display(students)
+
+
+        allstudents.addEventListener('click', () => {
+            display(students)
             console.log('clicked')
 
         })
+
+        malestudents.addEventListener('click', () => {
+            displayMale(students)
+            console.log('clicked')
+
+        })
+
+        femalestudents.addEventListener('click', () => {
+            displayfeMale(students)
+            console.log('clicked')
+
+        })
+
 
 
 
