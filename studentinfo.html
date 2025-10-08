@@ -61,8 +61,8 @@
         ]
 
         let display_data = document.getElementById('data')
-        let malestudent = document.getElementById('male-btn')
-        let femalestudent = document.getElementById('female-btn')
+        let malestudents = document.getElementById('male-btn')
+        let femalestudents = document.getElementById('female-btn')
 
         function display(arr) {
             let res = ``;
@@ -87,6 +87,15 @@
             
         }
         displayMale(students)
+
+        
+        
+
+        malestudents.addEventListener('click',()=>{
+            // displayMale()
+            console.log('clicked')
+
+        })
 
 
 
