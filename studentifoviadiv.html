@@ -13,6 +13,14 @@
         .bg-info {
             background: linear-gradient(45deg, rgb(15, 14, 14), cyan);
         }
+
+        .tr {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40%;
+
+        }
     </style>
 </head>
 
@@ -31,7 +39,7 @@
     </div>
 
     <div class="mt-5">
-
+        <!-- 
         <table class="table w-75 m-auto text-center ">
             <thead>
                 <tr>
@@ -41,10 +49,30 @@
                 </tr>
             </thead>
             <tbody id="data">
+                <tr>
+                    <td>${ele.id}</td>
+                    <td>${ele.name}</td>
+                    <td>${ele.Gender}</td>
+                </tr>`
+
 
 
             </tbody>
-        </table>
+        </table> -->
+
+        <div id="main" class="">
+
+            <div class="tr">
+                <div class="th">id</div>
+                <div class="th">name</div>
+                <div class="th">Gender</div>
+            </div>
+
+            <div class="data">
+                
+            </div>
+
+        </div>
     </div>
 
 
@@ -53,11 +81,11 @@
 
         let students = [
             { id: 101, name: 'Amit', Gender: 'male' },
-            { id: 102, name: 'sumit', Gender: 'male' },
-            { id: 103, name: 'saurabh', Gender: 'male' },
-            { id: 104, name: 'Anushka', Gender: 'female' },
-            { id: 105, name: 'Srishti', Gender: 'female' },
-            { id: 106, name: 'Annu', Gender: 'female' }
+            { id: 101, name: 'sumit', Gender: 'male' },
+            { id: 101, name: 'saurabh', Gender: 'male' },
+            { id: 101, name: 'Anushka', Gender: 'female' },
+            { id: 101, name: 'Srishti', Gender: 'female' },
+            { id: 101, name: 'Annu', Gender: 'female' }
         ]
 
         let display_data = document.getElementById('data')
@@ -68,11 +96,11 @@
         function display(arr) {
             let res = ``;
             arr.forEach((ele) => {
-                res += `<tr>
-                    <td>${ele.id}</td>
-                    <td>${ele.name}</td>
-                    <td>${ele.Gender}</td>
-                </tr>`
+                res += `<div class="tr">
+                    <div class="td">${ele.id}</div>
+                    <div class="td">${ele.name}</div>
+                    <div class="td">${ele.Gender}</div>
+                </div>`
                 // console.log(res)
             }
             )
@@ -117,6 +145,7 @@
         }
 
         searchBox.addEventListener('input', (ele) => filterBySearch(ele.target.value));
+        
  
    
 
@@ -147,7 +176,7 @@
 
 
 
-    </script>
+    </script> 
 
 </body>
 

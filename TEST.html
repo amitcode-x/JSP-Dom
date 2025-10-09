@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Text</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+
+            height: 500px;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .card {
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+   <div id="main">
+  <div class="card">
+    <span id="ct-val">0</span>
+    <textarea id="text-area"></textarea>
+    <div id="btndiv">
+      <button id="clear-btn">Clear</button>
+      <button id="back-btn">BackSpace</button>
+      <button id="count-btn">Count char</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  let clear_btn = document.getElementById('clear-btn');
+  let back_btn = document.getElementById('back-btn');
+  let count_btn = document.getElementById('count-btn');
+  let ct_val = document.getElementById('ct-val');
+  let textarea = document.getElementById('text-area');
+
+ 
+  clear_btn.addEventListener('click', () => {
+    textarea.value = '';
+    ct_val.textContent = 0;
+  });
+
+  
+  back_btn.addEventListener('click', () => {
+    textarea.value = textarea.value.slice(0, -1);
+  });
+
+  
+  count_btn.addEventListener('click', () => {
+    ct_val.textContent = textarea.value.length;
+  });
+</script>
+
+
+</body>
+
+</html>
