@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>count</title>
+    <style>
+        #main {
+            height: 500px;
+            gap: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #color {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid red;
+            height: 100px;
+            width: 200px;
+            gap: 10px;
+            background-color: cyan;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="main">
+        <div id="color" style="padding: 30px; text-align: center; font-size: 24px;">
+            <button id="inc">Increase</button>
+            <span id="val">0</span>
+            <button id="dec">Decrease</button>
+        </div>
+    </div>
+
+    <script>
+        let colorDiv = document.getElementById('color');
+        let inc_btn = document.getElementById('inc');
+        let val_span = document.getElementById('val');
+        let dec_btn = document.getElementById('dec');
+
+        let value = 0;
+
+    
+        function updateUI() {
+            val_span.textContent = value;
+
+            if (value === 0) {
+                colorDiv.style.backgroundColor = "white";
+            } else if (value < 0) {
+                colorDiv.style.backgroundColor = "red";
+            } else if (value % 2 !== 0) {
+                colorDiv.style.backgroundColor = "blue";
+            } else {
+                colorDiv.style.backgroundColor = "green";
+            }
+        }
+
+        inc_btn.addEventListener('click', () => {
+            value++;
+            updateUI();
+        });
+
+        dec_btn.addEventListener('click', () => {
+            value--;
+            updateUI();
+        });
+
+
+        updateUI();
+    </script>
+
+
+</body>
+
+</html>
